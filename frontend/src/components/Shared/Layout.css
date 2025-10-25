@@ -1,0 +1,36 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-container {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  min-height: calc(100vh - 65px);
+  background-color: var(--background);
+  overflow-y: auto;
+}
+
+.maintenance-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    min-height: auto;
+  }
+}
